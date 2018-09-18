@@ -3,6 +3,7 @@
   padding: 20px;
   color: white;
   text-align: center;
+  font-family: 'Patua One';
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 .body {
-  background-color: white;
+  background-color: azure;
   margin-left: 260px;
   margin-right: 260px;
   min-height: 800px;
@@ -43,18 +44,20 @@ input {
   border-radius: 8px;
   margin-left: 10px;
   padding: 6px;
-  height: 12px;
+  height: 31px;
   font-size: 18px;
+}
+
+label {
+  font-weight: 10;
 }
 
 button {
   border-radius: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
-  height: 27px;
+  height: 31px;
   margin-left: 10px;
 }
 

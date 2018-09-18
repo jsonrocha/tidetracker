@@ -6,12 +6,12 @@ class App extends Component {
     return (
         <div className="body">
         <header className="App-header">
-          <h1 className="App-title">Tide-Tracker v1.0</h1>
+          <h1 className="App-title"> <span class="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span class="glyphicon glyphicon-tint"></span></h1>
         </header>
         <div className="container">
         <div className="search">
         <label>Enter State/Province:</label>
-        <input type="text"></input><button>Search</button>
+        <input type="text"></input><button> <span class="glyphicon glyphicon-search"></span></button>
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
