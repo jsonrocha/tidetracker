@@ -6,6 +6,10 @@
   font-family: 'Patua One';
 }
 
+input:focus {
+  outline-width: 0;
+}
+
 body {
   background-image: url('/images/waves.gif');
   background-size: cover;
@@ -30,7 +34,7 @@ body {
   background-color: azure;
   margin-left: 260px;
   margin-right: 260px;
-  min-height: 800px;
+    min-height: 800px;
 }
 
 .search {
