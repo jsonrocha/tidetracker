@@ -14,7 +14,7 @@ const options = [
   { value: 'illinois', label: 'Illinois' },
   { value: 'indiana', label: 'Indiana' },
   { value: 'louisiana', label: 'Louisiana' },
-  { value: 'maine', label: 'Maine' },
+  { value: 'maine', label: 'Maine' }, 
   { value: 'maryland', label: 'Maryland' },
   { value: 'massachusetts', label: 'Massachusetts' },
   { value: 'michigan', label: 'Michigan' },
