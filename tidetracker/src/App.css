@@ -6,7 +6,21 @@
   font-family: 'Patua One';
 }
 
+.css-1rtrksz {
+  min-width: 300px;
+}
+
+.searchlabel {
+  margin-bottom: 0px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
 input:focus {
+  outline-width: 0;
+}
+
+button:focus {
   outline-width: 0;
 }
 
@@ -61,7 +75,7 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
-  height: 31px;
+  height: 38x;
   margin-left: 10px;
 }
 
