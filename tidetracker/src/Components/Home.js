@@ -45,7 +45,8 @@ const MyComponent = () => (
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="background">
+            <div className="content">
         <header className="App-header">
           <h1 className="App-title"> <span class="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span class="glyphicon glyphicon-tint"></span></h1>
         </header>
@@ -56,7 +57,7 @@ class Home extends Component {
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
-                
+            </div>
             </div>
         );
     }
