@@ -10,6 +10,10 @@
   min-width: 300px;
 }
 
+.css-rsyb7x {
+  width: 0px;
+}
+
 .searchlabel {
   margin-bottom: 0px;
   margin-top: 8px;
@@ -65,7 +69,6 @@ button:focus {
 
 input {
   border-radius: 8px;
-  margin-left: 10px;
   padding: 6px;
   height: 31px;
   font-size: 18px;
