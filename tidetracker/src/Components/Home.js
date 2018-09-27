@@ -48,12 +48,12 @@ class Home extends Component {
             <div className="background">
             <div className="content">
         <header className="App-header">
-          <h1 className="App-title"> <span class="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span class="glyphicon glyphicon-tint"></span></h1>
+          <h1 className="App-title"> <span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></h1>
         </header>
         <div className="container">
         <div className="search">
         <label className="searchlabel">Enter State/Province:</label>
-        <MyComponent /><button> <span class="glyphicon glyphicon-search"></span></button>
+        <MyComponent /><button> <span className="glyphicon glyphicon-search"></span></button>
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
