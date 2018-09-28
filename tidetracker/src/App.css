@@ -1,6 +1,5 @@
 .App-header {
   background-color: cadetblue;
-  padding: 20px;
   color: white;
   text-align: center;
   font-family: 'Patua One';
@@ -41,8 +40,7 @@ button:focus {
   background-color: azure;
   display: flex;
   flex-direction: column;
-  margin-right: 150px;
-  margin-left: 150px;
+
   min-height: 938px;
 }
 
@@ -62,6 +60,12 @@ button:focus {
   display: flex;
   justify-content: center;
 }
+
+.results {
+  padding-top: 30px;
+  font-size: 20px;
+}
+
 
 input {
   border-radius: 8px;
@@ -87,10 +91,31 @@ button {
   margin-top: 0px;
 }
 
+.glyphicon-align-justify {
+  float: left;
+  font-size: 40px;
+  align-content: center;
+  margin-top: 25px;
+}
+
+.menu {
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 27px;
+}
+
 .App-title {
   font-size: 40px;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.title {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }

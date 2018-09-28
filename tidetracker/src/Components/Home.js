@@ -47,8 +47,9 @@ class Home extends Component {
         return (
             <div className="background">
             <div className="content">
-        <header className="App-header">
-          <h1 className="App-title"> <span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></h1>
+            <header className="App-header">
+        <span className="menu size glyphicon glyphicon-align-justify"></span>
+        <span><span className="title"><span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></span></span>
         </header>
         <div className="container">
         <div className="search">

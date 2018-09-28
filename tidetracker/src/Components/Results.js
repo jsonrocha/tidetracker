@@ -6,22 +6,24 @@ class Results extends Component {
     
       this.state = {
           name:'',
-          water_level:'',
-          water_temperature:'',
+          water_level:{data:[{}]},
+          water_temperature:{data:[{}]},
           wind:'',
-          air_temperature:'',
-          air_pressure:'',
+          air_temperature:{data:[{}]},
+          air_pressure:{data:[{}]},
           visibility:'',
           high_low:'',
           currents:'',
+          wind:{data:[{}]},
+
       }
     }
     
     componentDidMount () {
-        const stationId = "8726724"
-        const products = ['water_temperature', 'water_level', 'air_temperature']
+        const stationId = "8725520"
+        const products = ['water_temperature', 'water_level', 'air_temperature', 'air_pressure', 'wind']
         products.forEach((product) => {
-            fetch(`https://tidesandcurrents.noaa.gov/api/datagetter?datum=NAVD&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`)
+            fetch(`https://tidesandcurrents.noaa.gov/api/datagetter?datum=MLLW&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`)
                 .then(resp => resp.json())
                 .then(json =>{
                     console.log(json)
@@ -34,9 +36,22 @@ class Results extends Component {
 
     render() {
         return (
-            <div>
-                {/* <h1>{this.state.air_temperature.data}</h1> */}
-                <h1>{this.state.water_temperature.data}</h1>
+            <div className="background">
+            <div className="content">
+            <header className="App-header">
+        <span className="menu size glyphicon glyphicon-align-justify"></span>
+        <span><span className="title"><span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></span></span>
+        </header>
+        <div className="container">
+        <div className="results">
+        <h1>Water Temperature: {this.state.water_temperature.data[0].v}°</h1>
+        <h1>Water Level: {(this.state.water_level.data[0].v * 1).toFixed(2)}</h1>
+        <h1>Air Temperature: {this.state.air_temperature.data[0].v}°</h1>
+        <h1>Air Pressure: {this.state.air_pressure.data[0].v} millibars</h1>
+        <h1>Wind: {this.state.wind.data[0].s} knots from {this.state.wind.data[0].dr}</h1>
+        </div>
+        </div>
+            </div>
             </div>
         );
     }
