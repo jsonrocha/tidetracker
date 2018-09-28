@@ -9,6 +9,7 @@ class Results extends Component {
           water_level:'',
           water_temperature:'',
           wind:'',
+          air_temperature:'',
           air_pressure:'',
           visibility:'',
           high_low:'',
@@ -18,22 +19,24 @@ class Results extends Component {
     
     componentDidMount () {
         const stationId = "8726724"
-        const _url = "https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20130808 15:00&end_date=20130808 15:06&station=" + stationId + "&product=water_temperature&units=english&time_zone=gmt&application=ports_screen&format=json"
-        fetch(_url).then(resp => resp.json())
-        .then(newTidesData => {
-            console.log(newTidesData)
-            this.setState({
-                name:newTidesData.metadata.name,
-                water_level: newTidesData.metadata.name
-            })
+        const products = ['water_temperature', 'water_level', 'air_temperature']
+        products.forEach((product) => {
+            fetch(`https://tidesandcurrents.noaa.gov/api/datagetter?datum=NAVD&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`)
+                .then(resp => resp.json())
+                .then(json =>{
+                    console.log(json)
+                    this.setState({
+                        [product]:json,
+                    })
+                })
         })
     }
 
     render() {
         return (
             <div>
-                <h1>Results</h1>
-                <h1>{this.state.name}</h1>
+                {/* <h1>{this.state.air_temperature.data}</h1> */}
+                <h1>{this.state.water_temperature.data}</h1>
             </div>
         );
     }
