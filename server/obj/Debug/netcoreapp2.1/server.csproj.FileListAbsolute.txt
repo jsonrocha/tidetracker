@@ -1,0 +1,14 @@
+C:\assignments\tidetracker\server\bin\Debug\netcoreapp2.1\server.deps.json
+C:\assignments\tidetracker\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.json
+C:\assignments\tidetracker\server\bin\Debug\netcoreapp2.1\server.runtimeconfig.dev.json
+C:\assignments\tidetracker\server\bin\Debug\netcoreapp2.1\server.dll
+C:\assignments\tidetracker\server\bin\Debug\netcoreapp2.1\server.pdb
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.csprojAssemblyReference.cache
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.csproj.CoreCompileInputs.cache
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.RazorAssemblyInfo.cache
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.RazorAssemblyInfo.cs
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.AssemblyInfoInputs.cache
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.AssemblyInfo.cs
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.RazorTargetAssemblyInfo.cache
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.dll
+C:\assignments\tidetracker\server\obj\Debug\netcoreapp2.1\server.pdb
