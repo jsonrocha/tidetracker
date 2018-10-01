@@ -12,13 +12,19 @@ namespace TideTracker.Controllers
     [ApiController]
     public class WeatherStationController : ControllerBase
     {
+        private TideTrackerContext db { get; set; }
+
+        public WeatherStationController()
+        {
+            this.db = new TideTrackerContext();
+        }
+
          [HttpGet]
         public ActionResult<IEnumerable<WeatherStation>> Get()
         {
-            var db = new TideTrackerContext();
+            this.db.SaveChanges();
 
-            return db.WeatherStations;
-        }
-
+            return this.db.WeatherStations;
+        }   
     }
 }
