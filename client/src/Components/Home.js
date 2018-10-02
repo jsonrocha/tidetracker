@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const options = [
     { value: 'alabama', label: 'Alabama' },
@@ -39,12 +39,20 @@ const options = [
     { value: 'wyoming', label: 'Wyoming' },
   ]
 
-const MyComponent = () => (
-    <Select options={options} />
-  )
-
 class Home extends Component {
+    state= {
+        selectedOption: null,
+    }
+    handleChange = (selectedOption) => {
+        this.setState({ selectedOption });
+        console.log('Option selected:', selectedOption.label);
+    }
     render() {
+        const { selectedOption } = this.state
+        
+            const Dropdown = () => (
+                <Select options={options} value={selectedOption} onChange={this.handleChange} />
+                    )
         return (
             <div className="background">
             <div className="content">
@@ -55,7 +63,7 @@ class Home extends Component {
         <div className="container">
         <div className="search">
         <label className="searchlabel">Enter State/Province:</label>
-        <MyComponent /><Link className="plain" to={"/locations/"+selectedState}><button><span className="glyphicon glyphicon-search"></span></button></Link>
+        <Dropdown /><Link className="plain" to={"/locations/"}><button><span className="glyphicon glyphicon-search"></span></button></Link>
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
