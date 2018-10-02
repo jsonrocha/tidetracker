@@ -12,10 +12,10 @@ class App extends Component {
         <div className="body">
         <Router>
           <Switch>
-            <Route path="/home" component={Home} />
-            <Route path="/search" component={Search}/>
-            <Route path="/results" component={Results}/>
-            <Route path="/locations" component={Locations}/>
+            <Route path="/" exact component={Home} />
+            <Route path="/search" exact component={Search}/>
+            <Route path="/results/:station" exact component={Results}/>
+            <Route path="/locations/:state" exact component={Locations}/>
           </Switch>
         </Router>
         </div>

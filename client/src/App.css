@@ -5,6 +5,12 @@
   font-family: 'Patua One';
 }
 
+.plain button{
+  text-decoration: none;
+  color: black;
+  height: 45px;
+}
+
 .css-1rtrksz {
   min-width: 300px;
 }
@@ -21,6 +27,13 @@ input:focus {
 
 button:focus {
   outline-width: 0;
+}
+
+.mapcontainer {
+  display: flex;
+  justify-content: center;
+  padding-left: 600px;
+  padding-right: 600px;
 }
 
 .container {
@@ -40,7 +53,6 @@ button:focus {
   background-color: azure;
   display: flex;
   flex-direction: column;
-
   min-height: 938px;
 }
 

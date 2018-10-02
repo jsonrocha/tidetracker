@@ -8,7 +8,6 @@ class Results extends Component {
           name:'',
           water_level:{data:[{}]},
           water_temperature:{data:[{}]},
-          wind:'',
           air_temperature:{data:[{}]},
           air_pressure:{data:[{}]},
           visibility:'',

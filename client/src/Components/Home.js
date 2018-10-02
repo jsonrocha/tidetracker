@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import { Link } from 'react-router-dom'
 
 const options = [
     { value: 'alabama', label: 'Alabama' },
@@ -54,7 +55,7 @@ class Home extends Component {
         <div className="container">
         <div className="search">
         <label className="searchlabel">Enter State/Province:</label>
-        <MyComponent /><button> <span className="glyphicon glyphicon-search"></span></button>
+        <MyComponent /><Link className="plain" to={"/locations/"+selectedState}><button><span className="glyphicon glyphicon-search"></span></button></Link>
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
