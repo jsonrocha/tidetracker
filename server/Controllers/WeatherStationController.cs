@@ -10,11 +10,11 @@ namespace TideTracker.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class WeatherStationController : ControllerBase
+    public class WeatherStationsController : ControllerBase
     {
         private TideTrackerContext db { get; set; }
 
-        public WeatherStationController()
+        public WeatherStationsController()
         {
             this.db = new TideTrackerContext();
         }
@@ -24,7 +24,7 @@ namespace TideTracker.Controllers
         {
             this.db.SaveChanges();
 
-            return this.db.WeatherStations;
+            return Ok(this.db.WeatherStations);
         }   
     }
 }
