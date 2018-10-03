@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
 
 const style = {
@@ -8,9 +9,29 @@ const style = {
 }
 
 class Locations extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          stations: []
+        };
+      }
+
+      componentDidMount() {
+        fetch("https://localhost:5001/api/weatherstations/" + this.props.match.params.state)
+          .then(resp => resp.json())
+          .then(stationsData => {
+            console.log(stationsData);
+            this.setState({
+              stations:stationsData
+            });
+          });
+  
+      }
+
     render() {
         console.log(this.props.match.params.state)
         return (
+            <section>
             <div className="background">
             <div className="content">
             <header className="App-header">
@@ -19,20 +40,26 @@ class Locations extends Component {
         </header>
         <div className="container">
         <div className="search">
-        <Map style={style} google={this.props.google} zoom={4}>
-         
-         <Marker onClick={this.onMarkerClick}
-                 name={'Current location'} />
-        
-         <InfoWindow onClose={this.onInfoWindowClose}>
-             <div>
-             </div>
-         </InfoWindow>
-        </Map>
-        </div>
+       {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
+            {this.state.stations.map((station, i)=> {
+          return (
+            <div key={i}>
+              <div>
+              <ul>
+              <Link to={"/results/" + station.stationId}><li>Station ID: {station.stationId}</li></Link >
+              <li>{station.nickname} Station</li>
+              <li>Latitude: {station.lat}</li>
+              <li>Longitude: {station.long}</li>
+              </ul>
+              </div>
+            </div>
+          );
+        })}
+                </div>
         </div>
             </div>
             </div>
+          </section>
         );
       }
     }

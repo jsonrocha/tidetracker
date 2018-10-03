@@ -19,7 +19,7 @@ class Results extends Component {
     }
     
     componentDidMount () {
-        const stationId = "8725520"
+        const stationId = this.props.match.params.station
         const products = ['water_temperature', 'water_level', 'air_temperature', 'air_pressure', 'wind']
         products.forEach((product) => {
             fetch(`https://tidesandcurrents.noaa.gov/api/datagetter?datum=MLLW&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`)
