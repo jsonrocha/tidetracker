@@ -4,27 +4,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using server;
+using TideTracker;
 
 namespace TideTracker.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
+
     public class WeatherStationsController : ControllerBase
     {
-        private TideTrackerContext db { get; set; }
+        private TideTrackerContext db = null;
 
-        public WeatherStationsController()
-        {
-            this.db = new TideTrackerContext();
+        public WeatherStationsController(TideTrackerContext _db)
+        { 
+            this.db = _db;
         }
 
-         [HttpGet]
-        public ActionResult<IEnumerable<WeatherStation>> Get()
-        {
-            this.db.SaveChanges();
+         [HttpGet("{state}")]
+        public IEnumerable<WeatherStation> GetState(string state)
+        {   
+            var db = new TideTrackerContext();
 
-            return Ok(this.db.WeatherStations);
+            var stationByState = this.db.WeatherStations.Where(w => w.State == state);
+
+            return stationByState;
         }   
     }
 }
