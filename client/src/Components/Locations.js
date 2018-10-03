@@ -9,6 +9,7 @@ const style = {
 
 class Locations extends Component {
     render() {
+        console.log(this.props.match.params.state)
         return (
             <div className="background">
             <div className="content">

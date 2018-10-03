@@ -41,7 +41,7 @@ const options = [
 
 class Home extends Component {
     state= {
-        selectedOption: null,
+        selectedOption: {},
     }
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
@@ -63,7 +63,7 @@ class Home extends Component {
         <div className="container">
         <div className="search">
         <label className="searchlabel">Enter State/Province:</label>
-        <Dropdown /><Link className="plain" to={"/locations/"}><button><span className="glyphicon glyphicon-search"></span></button></Link>
+        <Dropdown /><Link className="plain" to={"/locations/"+this.state.selectedOption.value}><button><span className="glyphicon glyphicon-search"></span></button></Link>
         </div>
        <label className="disclaimer">* Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK, AR, TN, KY, MO, KS, CO, IA</label>
         </div>
