@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -25,6 +26,13 @@ namespace server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+        services.AddCors();
+        
+            services
+                .AddEntityFrameworkNpgsql()
+                .AddDbContext<TideTrackerContext>(opt => 
+                    opt.UseNpgsql("server=localhost;username=postgres;password=warrior;database=TideTracker"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -41,6 +49,12 @@ namespace server
             }
 
             app.UseHttpsRedirection();
+             app.UseCors(builder =>
+          builder
+              .AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials());
             app.UseMvc();
         }
     }
