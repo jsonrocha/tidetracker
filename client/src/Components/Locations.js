@@ -41,6 +41,20 @@ class Locations extends Component {
         <div className="container">
         <div className="search">
        {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
+       <Map 
+       style={style}
+       google={this.props.google} 
+    // center= <===Lat & Long
+       zoom={4}>
+         
+         <Marker onClick={this.onMarkerClick}
+                 name={'Current location'} />
+        
+         <InfoWindow onClose={this.onInfoWindowClose}>
+             <div>
+             </div>
+         </InfoWindow>
+        </Map>
             {this.state.stations.map((station, i)=> {
           return (
             <div key={i}>
