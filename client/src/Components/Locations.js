@@ -1,47 +1,58 @@
-import React, { Component } from 'react';
-import GMap from './GMap'
+import React, { Component } from "react";
+import GMap from "./GMap";
+import { Link } from 'react-router-dom'
 
 class Locations extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          stations: []
-        };
-      }
-      
-    componentDidMount() {
-        fetch("https://localhost:5001/api/weatherstations/" + this.props.match.params.state)
-          .then(resp => resp.json())
-          .then(stationsData => {
-            console.log(stationsData);
-            this.setState({
-              stations:stationsData
-            });
-          });
-    
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      stations: []
+    };
+  }
 
-    render() {
-        console.log(this.props.match.params.state)
-        return (
-            <section>
-            <div className="background">
-            <div className="content">
+  componentDidMount() {
+    fetch(
+      "https://localhost:5001/api/weatherstations/" +
+        this.props.match.params.state
+    )
+      .then(resp => resp.json())
+      .then(stationsData => {
+        console.log(stationsData);
+        this.setState({
+          stations: stationsData
+        });
+      });
+  }
+
+  render() {
+    console.log(this.props.match.params.state);
+    return (
+      <section>
+        <div className="background">
+          <div className="content">
             <header className="App-header">
-        <span className="menu size glyphicon glyphicon-align-justify"></span>
-        <span><span className="title"><span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></span></span>
-        </header>
-        <div className="container">
-        <div className="search">
-       {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
-        <GMap stations={this.state.stations} />
-       </div>
+              <Link to="/">
+                <span className="menu size glyphicon glyphicon-home" />
+              </Link>
+              <span>
+                <span className="title">
+                  <span className="glyphicon glyphicon-tint" />
+                  TIDE TRACKER 2K18{" "}
+                  <span className="glyphicon glyphicon-tint" />
+                </span>
+              </span>
+            </header>
+            <div className="container">
+              <div className="search">
+                {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
+                <GMap stations={this.state.stations} />
+              </div>
+            </div>
+          </div>
         </div>
-            </div>
-            </div>
-          </section>
-        );
-      }
-    }
+      </section>
+    );
+  }
+}
 
 export default Locations;

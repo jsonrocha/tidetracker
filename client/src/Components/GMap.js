@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import { Link } from "react-router-dom";
+import {BrowserRouter as Router} from 'react-router-dom'
 
 const style = {
-  width: "65%",
+  width: "60%",
   height: "80%",
   display: "flex",
   padding: "0px 0px 0px 0px"
@@ -70,6 +71,7 @@ class GMap extends Component {
                 }}
                 onClick={this.onMarkerClick}
                 station={station.nickname}
+                Id={station.stationId}
               />
             );
           })}
@@ -77,8 +79,13 @@ class GMap extends Component {
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
           >
-            <div>
-                <h1>{this.state.selectedPlace.station}</h1>
+            <div className="center">
+               <Router>
+               <Link to={"/results/" + this.state.selectedPlace.Id}><h4>{this.state.selectedPlace.Id}</h4></Link>
+               </Router>
+               <Router>
+               <Link to={"/results/" + this.state.selectedPlace.Id}><h4>{this.state.selectedPlace.station} Station</h4></Link>
+               </Router>
             </div>
           </InfoWindow>
         </Map>

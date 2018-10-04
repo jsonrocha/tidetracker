@@ -15,6 +15,10 @@
   min-width: 300px;
 }
 
+.center {
+  text-align: center;
+}
+
 .searchlabel {
   margin-bottom: 0px;
   margin-top: 8px;
@@ -32,7 +36,7 @@ button:focus {
 .mapcontainer {
   display: flex;
   justify-content: center;
-  margin-left: 200px;
+
 }
 
 .container {
@@ -52,7 +56,7 @@ button:focus {
   background-color: azure;
   display: flex;
   flex-direction: column;
-  min-height: 938px;
+  min-height: 1070px;
 }
 
 .background {
@@ -102,11 +106,12 @@ button {
   margin-top: 0px;
 }
 
-.glyphicon-align-justify {
+.glyphicon-home {
   float: left;
   font-size: 40px;
   align-content: center;
   margin-top: 25px;
+  color: white;
 }
 
 .menu {
