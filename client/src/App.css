@@ -32,8 +32,7 @@ button:focus {
 .mapcontainer {
   display: flex;
   justify-content: center;
-  padding-left: 600px;
-  padding-right: 600px;
+  margin-left: 200px;
 }
 
 .container {

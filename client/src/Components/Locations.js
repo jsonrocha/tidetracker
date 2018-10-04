@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
-
-const style = {
-    width: '100%',
-    height: '100%',
-    padding: '0px 100px 0px 100px',
-}
+import GMap from './GMap'
 
 class Locations extends Component {
     constructor(props) {
@@ -15,8 +8,8 @@ class Locations extends Component {
           stations: []
         };
       }
-
-      componentDidMount() {
+      
+    componentDidMount() {
         fetch("https://localhost:5001/api/weatherstations/" + this.props.match.params.state)
           .then(resp => resp.json())
           .then(stationsData => {
@@ -25,7 +18,7 @@ class Locations extends Component {
               stations:stationsData
             });
           });
-  
+    
       }
 
     render() {
@@ -41,35 +34,8 @@ class Locations extends Component {
         <div className="container">
         <div className="search">
        {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
-       <Map 
-       style={style}
-       google={this.props.google} 
-    // center= <===Lat & Long
-       zoom={4}>
-         
-         <Marker onClick={this.onMarkerClick}
-                 name={'Current location'} />
-        
-         <InfoWindow onClose={this.onInfoWindowClose}>
-             <div>
-             </div>
-         </InfoWindow>
-        </Map>
-            {this.state.stations.map((station, i)=> {
-          return (
-            <div key={i}>
-              <div>
-              <ul>
-              <Link to={"/results/" + station.stationId}><li>Station ID: {station.stationId}</li></Link >
-              <li>{station.nickname} Station</li>
-              <li>Latitude: {station.lat}</li>
-              <li>Longitude: {station.long}</li>
-              </ul>
-              </div>
-            </div>
-          );
-        })}
-                </div>
+        <GMap stations={this.state.stations} />
+       </div>
         </div>
             </div>
             </div>
@@ -78,6 +44,4 @@ class Locations extends Component {
       }
     }
 
-export default GoogleApiWrapper({
-    apiKey: ("AIzaSyCbt3UlsCkgvu4tAkPhwP8BYMQ_tiHypI8")
-})(Locations)
+export default Locations;
