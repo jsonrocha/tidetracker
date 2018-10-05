@@ -5,6 +5,12 @@
   font-family: 'Patua One';
 }
 
+.welcome {
+  margin-top: 30px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
 .plain button{
   text-decoration: none;
   color: black;
@@ -15,6 +21,18 @@
   min-width: 300px;
 }
 
+.css-1wy0on6 {
+  cursor: pointer;
+}
+
+.css-1aya2g8:focus {
+  outline-width: 0;
+}
+
+.css-1rtrksz:focus {
+  outline-width: 0;
+}
+
 .center {
   text-align: center;
 }
@@ -23,6 +41,7 @@
   margin-bottom: 0px;
   margin-top: 8px;
   margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 input:focus {
@@ -36,7 +55,7 @@ button:focus {
 .mapcontainer {
   display: flex;
   justify-content: center;
-
+  font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -44,6 +63,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Raleway', sans-serif;
 }
 
 .disclaimer {
@@ -57,6 +77,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 1070px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .background {
@@ -87,10 +108,15 @@ input {
   padding: 6px;
   height: 31px;
   font-size: 18px;
+  font-family: 'Raleway', sans-serif;
 }
 
 label {
   font-weight: 10;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 button {
@@ -104,6 +130,7 @@ button {
 
 .content {
   margin-top: 0px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .glyphicon-home {
@@ -133,5 +160,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 60px;
 }

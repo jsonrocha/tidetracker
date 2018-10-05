@@ -57,10 +57,10 @@ class Home extends Component {
             <div className="background">
             <div className="content">
             <header className="App-header">
-            <Link to="/"><span className="menu size glyphicon glyphicon-home"></span></Link>
-        <span><span className="title"><span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></span></span>
+        <span><Link to="/"><span className="menu size glyphicon glyphicon-home"></span></Link><span className="title"><span className="glyphicon glyphicon-tint"></span>TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint"></span></span></span>
         </header>
         <div className="container">
+        <h3 className="welcome">Find Your Local Weather Station!</h3>
         <div className="search">
         <label className="searchlabel">Enter State/Province:</label>
         <Dropdown /><Link className="plain" to={"/locations/"+this.state.selectedOption.label}><button><span className="glyphicon glyphicon-search"></span></button></Link>
