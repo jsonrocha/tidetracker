@@ -68,7 +68,7 @@ class Home extends Component {
                 <span className="glyphicon glyphicon-tint" />
                 TIDE TRACKER<span className="glyphicon glyphicon-tint" />
                 </span>
-                <span></span>
+                <span className="menu2 size glyphicon glyphicon-home" />
           </header>
           <div className="container">
             <h3 className="welcome">Find Your Local Weather Station!</h3>
