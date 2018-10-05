@@ -7,7 +7,7 @@ const style = {
   width: "1140px",
   height: "80%",
   position: "relative",
-  padding: "0px 0px 0px 0px"
+  margin: "0px 0px 0px 0px"
 };
 
 // **BOUNDS ATTEMPT..NEED GOOGLEPROPS**
