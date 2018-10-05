@@ -61,15 +61,14 @@ class Home extends Component {
       <div className="background">
         <div className="content">
           <header className="App-header">
-            <span>
               <Link to="/">
                 <span className="menu size glyphicon glyphicon-home" />
               </Link>
-              <span className="title">
+              <span className="tidetracker">
                 <span className="glyphicon glyphicon-tint" />
-                TIDE TRACKER 2K18 <span className="glyphicon glyphicon-tint" />
-              </span>
-            </span>
+                TIDE TRACKER<span className="glyphicon glyphicon-tint" />
+                </span>
+                <span></span>
           </header>
           <div className="container">
             <h3 className="welcome">Find Your Local Weather Station!</h3>

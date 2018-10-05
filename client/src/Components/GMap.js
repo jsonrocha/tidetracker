@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const style = {
-  width: "60%",
+  width: "1140px",
   height: "80%",
-  display: "flex",
+  position: "relative",
   padding: "0px 0px 0px 0px"
 };
 
@@ -59,7 +59,7 @@ class GMap extends Component {
             lat: 40.854885,
             lng: -98.081807
           }}
-          zoom={2.5}
+          zoom={4}
         >
           {this.props.stations.map((station, i) => {
             return (

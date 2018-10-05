@@ -31,16 +31,14 @@ class Locations extends Component {
         <div className="background">
           <div className="content">
             <header className="App-header">
-              <Link to="/">
+            <Link to="/">
                 <span className="menu size glyphicon glyphicon-home" />
               </Link>
-              <span>
-                <span className="title">
-                  <span className="glyphicon glyphicon-tint" />
-                  TIDE TRACKER 2K18{" "}
-                  <span className="glyphicon glyphicon-tint" />
+              <span className="tidetracker">
+                <span className="glyphicon glyphicon-tint" />
+                TIDE TRACKER<span className="glyphicon glyphicon-tint" />
                 </span>
-              </span>
+                <span></span>
             </header>
             <div className="container">
               <div className="search">
