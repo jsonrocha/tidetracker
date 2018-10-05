@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import { Link } from "react-router-dom";
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from "react-router-dom";
 
 const style = {
   width: "60%",
@@ -80,12 +80,16 @@ class GMap extends Component {
             visible={this.state.showingInfoWindow}
           >
             <div className="center">
-               <Router>
-               <Link to={"/results/" + this.state.selectedPlace.Id}><h4>{this.state.selectedPlace.Id}</h4></Link>
-               </Router>
-               <Router>
-               <Link to={"/results/" + this.state.selectedPlace.Id}><h4>{this.state.selectedPlace.station} Station</h4></Link>
-               </Router>
+              <Router>
+                <Link to={"/results/" + this.state.selectedPlace.Id}>
+                  <h4>{this.state.selectedPlace.Id}</h4>
+                </Link>
+              </Router>
+              <Router>
+                <Link to={"/results/" + this.state.selectedPlace.Id}>
+                  <h4>{this.state.selectedPlace.station} Station</h4>
+                </Link>
+              </Router>
             </div>
           </InfoWindow>
         </Map>

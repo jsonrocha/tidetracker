@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GMap from "./GMap";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 class Locations extends Component {
   constructor(props) {

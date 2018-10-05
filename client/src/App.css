@@ -1,17 +1,17 @@
 .App-header {
-  background-color: cadetblue;
+  background-color: #395870;
   color: white;
   text-align: center;
-  font-family: 'Patua One';
+  font-family: "Patua One";
 }
 
 .welcome {
   margin-top: 30px;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-.plain button{
+.plain button {
   text-decoration: none;
   color: black;
   height: 45px;
@@ -41,7 +41,7 @@
   margin-bottom: 0px;
   margin-top: 8px;
   margin-right: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 input:focus {
@@ -55,7 +55,7 @@ button:focus {
 .mapcontainer {
   display: flex;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -63,7 +63,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .disclaimer {
@@ -77,12 +77,12 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 1070px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .background {
   min-height: 938px;
-  background-image: url('/images/waves.gif');
+  background-image: url("/images/waves.gif");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -102,13 +102,12 @@ button:focus {
   font-size: 20px;
 }
 
-
 input {
   border-radius: 8px;
   padding: 6px;
   height: 31px;
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 label {
@@ -130,7 +129,7 @@ button {
 
 .content {
   margin-top: 0px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .glyphicon-home {
@@ -139,6 +138,10 @@ button {
   align-content: center;
   margin-top: 25px;
   color: white;
+}
+
+.results {
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu {
@@ -164,4 +167,76 @@ button {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 60px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Montserrat", sans-serif;
+  width: 400px;
+  height: 300px;
+}
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+thead {
+  background: #395870;
+  background: linear-gradient(#49708f, #293f50);
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+th {
+  text-align: center;
+}
+th:first-child {
+  border-top-left-radius: 5px;
+}
+th:last-child {
+  border-top-right-radius: 5px;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+.book-title {
+  color: #395870;
+  display: block;
+}
+.text-offset {
+  color: #7c7c80;
+  font-size: 12px;
+}
+.item-stock,
+.item-qty {
+  text-align: center;
+}
+.item-price {
+  text-align: right;
+}
+.item-multiple {
+  display: block;
+}
+tfoot {
+  text-align: right;
+}
+tfoot tr:last-child {
+  background: #f0f0f2;
+  color: #395870;
+  font-weight: bold;
+}
+tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
 }
