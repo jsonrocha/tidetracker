@@ -56,9 +56,17 @@ button:focus {
   outline-width: 0;
 }
 
-.mapcontainer:first-child {
+.mapcontainer{
   font-family: "Raleway", sans-serif;
-  width: 1140px;
+  width: 790px;
+}
+
+.mapcontainer > div {
+  width: 790px !important;
+}
+
+.mapcontainer > div div {
+  width: 100%;
 }
 
 .container {
@@ -85,6 +93,7 @@ button:focus {
   flex-direction: column;
   min-height: 1070px;
   font-family: "Raleway", sans-serif;
+  margin: 30px;
 }
 
 .background {

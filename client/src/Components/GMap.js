@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const style = {
-  width: "1140px",
   height: "80%",
   position: "relative",
   margin: "0px 0px 0px 0px"
@@ -55,6 +54,7 @@ class GMap extends Component {
           onClick={this.onMapClicked}
           style={style}
           google={this.props.google}
+          mapTypeControl={false}
           initialCenter={{
             lat: 40.854885,
             lng: -98.081807
