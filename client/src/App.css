@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #dbdcdc;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .welcome {
@@ -58,11 +60,13 @@ button:focus {
 
 .mapcontainer{
   font-family: "Raleway", sans-serif;
-  width: 790px;
+  width: 1212px;
+  display: flex;
+  justify-content: center;
 }
 
 .mapcontainer > div {
-  width: 790px !important;
+  width: 1212px !important;
 }
 
 .mapcontainer > div div {
@@ -94,7 +98,6 @@ button:focus {
   flex-direction: column;
   min-height: 1070px;
   font-family: "Raleway", sans-serif;
-  margin: 30px;
 }
 
 .background {

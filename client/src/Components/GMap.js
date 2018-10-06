@@ -9,19 +9,6 @@ const style = {
   margin: "0px 0px 0px 0px"
 };
 
-// **BOUNDS ATTEMPT..NEED GOOGLEPROPS**
-// var points = [
-//     { lat: 42.02, lng: -77.01 },
-//     { lat: 42.03, lng: -77.02 },
-//     { lat: 41.03, lng: -77.04 },
-//     { lat: 42.05, lng: -77.02 }
-// ]
-
-// var bounds = new this.props.google.maps.LatLngBounds();
-// for (var i = 0; i < points.length; i++) {
-//   bounds.extend(points[i]);
-// }
-
 class GMap extends Component {
   state = {
     showingInfoWindow: false,
@@ -56,8 +43,8 @@ class GMap extends Component {
           google={this.props.google}
           mapTypeControl={false}
           initialCenter={{
-            lat: 40.854885,
-            lng: -98.081807
+            lat: 45.854885,
+            lng: -105.081807
           }}
           zoom={4}
         >
