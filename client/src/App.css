@@ -11,6 +11,7 @@
   margin-top: 30px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
+  color: #395870;
 }
 
 .plain button {
@@ -21,7 +22,7 @@
 }
 
 .css-1rtrksz {
-  min-width: 280px;
+  min-width: 200px;
 }
 
 .css-1wy0on6 {
@@ -98,7 +99,7 @@ button:focus {
 
 .search {
   padding-top: 30px;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
 }
