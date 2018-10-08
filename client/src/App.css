@@ -41,6 +41,7 @@
 
 .center {
   text-align: center;
+  min-width: 200px;
 }
 
 .searchlabel {
@@ -60,7 +61,7 @@ button:focus {
 
 .mapcontainer{
   font-family: "Raleway", sans-serif;
-  width: 1212px;
+  width: 1400px;
   display: flex;
   justify-content: center;
 }
@@ -69,18 +70,12 @@ button:focus {
   width: 1212px !important;
 }
 
-.mapcontainer > div div {
-  width: 100%;
-}
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
-  margin-left: 21px;
-  margin-right: 21px;
   padding: 0px;
 }
 
@@ -89,7 +84,7 @@ button:focus {
   display: flex;
   justify-content: center;
   font-size: 12px;
-  width: 540px;
+
 }
 
 .content {
@@ -97,6 +92,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 1070px;
+  width: 1400px;
   font-family: "Raleway", sans-serif;
 }
 
@@ -115,6 +111,10 @@ button:focus {
   font-size: 18px;
   display: flex;
   justify-content: center;
+}
+
+.h4 {
+font-family: "Raleway", sans-serif;
 }
 
 .results {
@@ -265,3 +265,45 @@ tfoot tr:last-child td:first-child {
 tfoot tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
+
+  .gm-style .gm-style-iw {
+            text-align: center;
+         }    
+
+     
+         /*style the p tag*/
+         .gm-style .gm-style-iw #google-popup p{
+            padding: 10px;
+         }
+         
+/*      
+        /*style the arrow*/
+        /* .gm-style div div div div div div div div {
+            padding: 0;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            color: #fff;
+            font-size: 16px; */
+        /* } */
+        
+        /*style the link*/
+        .gm-style div div div div div div div div a {
+            color: #395870;
+            font-weight: bold;
+        }
+
+        .blue {
+         color: #395870;
+         font-size: 15px;
+        }
+
+        .stationlink {
+          font-size: 20px;
+        }
+
+        h1 {
+          color: #395870;
+          text-align: center;
+          margin-bottom: 50px;
+        }

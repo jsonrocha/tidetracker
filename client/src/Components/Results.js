@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 class Results extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: "",
       water_level: { data: [{}] },
       water_temperature: { data: [{}] },
       air_temperature: { data: [{}] },
       air_pressure: { data: [{}] },
-      visibility: "",
-      high_low: "",
-      currents: "",
       wind: { data: [{}] }
     };
   }
@@ -46,17 +42,19 @@ class Results extends Component {
       <div className="background">
         <div className="content">
           <header className="App-header">
-          <Link to="/">
-                <span className="menu size glyphicon glyphicon-home" />
-              </Link>
-              <span className="tidetracker">
-                <span className="glyphicon glyphicon-tint" />
-                TIDE TRACKER<span className="glyphicon glyphicon-tint" />
-                </span>
-                <span className="menu2 size glyphicon glyphicon-home" />
+            <Link to="/">
+              <span className="menu size glyphicon glyphicon-home" />
+            </Link>
+            <span className="tidetracker">
+              <span className="glyphicon glyphicon-tint" />
+              TIDE TRACKER
+              <span className="glyphicon glyphicon-tint" />
+            </span>
+            <span className="menu2 size glyphicon glyphicon-home" />
           </header>
           <div className="container">
             <div className="results">
+              <h1>Station ID: {this.props.match.params.station}</h1>
               <table>
                 <thead>
                   <tr>

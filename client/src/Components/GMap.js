@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const style = {
-  height: "80%",
+  height: "85%",
   position: "relative",
   margin: "0px 0px 0px 0px"
 };
@@ -69,12 +69,17 @@ class GMap extends Component {
             <div className="center">
               <Router>
                 <Link to={"/results/" + this.state.selectedPlace.Id}>
-                  <h4>{this.state.selectedPlace.Id}</h4>
+                  <h4>View Results for:</h4>
                 </Link>
               </Router>
               <Router>
                 <Link to={"/results/" + this.state.selectedPlace.Id}>
-                  <h4>{this.state.selectedPlace.station} Station</h4>
+                  <span className="glyphicon blue glyphicon-tint" />
+                  <span className="stationlink">
+                    {" "}
+                    {this.state.selectedPlace.station} Station{" "}
+                  </span>
+                  <span className="glyphicon blue glyphicon-tint" />
                 </Link>
               </Router>
             </div>

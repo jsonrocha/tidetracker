@@ -11,8 +11,6 @@ const options = [
   { value: "florida", label: "Florida" },
   { value: "georgia", label: "Georgia" },
   { value: "hawaii", label: "Hawaii" },
-  { value: "illinois", label: "Illinois" },
-  { value: "indiana", label: "Indiana" },
   { value: "louisiana", label: "Louisiana" },
   { value: "maine", label: "Maine" },
   { value: "maryland", label: "Maryland" },
@@ -20,9 +18,7 @@ const options = [
   { value: "michigan", label: "Michigan" },
   { value: "minnesota", label: "Minnesota" },
   { value: "mississippi", label: "Mississippi" },
-  { value: "new hampshire", label: "New Hampshire" },
   { value: "new jersey", label: "New Jersey" },
-  { value: "new mexico", label: "New Mexico" },
   { value: "new york", label: "New York" },
   { value: "north carolina", label: "North Carolina" },
   { value: "ohio", label: "Ohio" },
@@ -31,12 +27,8 @@ const options = [
   { value: "rhode island", label: "Rhode Island" },
   { value: "south carolina", label: "South Carolina" },
   { value: "texas", label: "Texas" },
-  { value: "vermont", label: "Vermont" },
   { value: "virginia", label: "Virginia" },
-  { value: "washington", label: "Washington" },
-  { value: "west virginia", label: "West Virginia" },
-  { value: "wisconsin", label: "Wisconsin" },
-  { value: "wyoming", label: "Wyoming" }
+  { value: "washington", label: "Washington" }
 ];
 
 class Home extends Component {
@@ -61,14 +53,15 @@ class Home extends Component {
       <div className="background">
         <div className="content">
           <header className="App-header">
-              <Link to="/">
-                <span className="menu size glyphicon glyphicon-home" />
-              </Link>
-              <span className="tidetracker">
-                <span className="glyphicon glyphicon-tint" />
-                TIDE TRACKER<span className="glyphicon glyphicon-tint" />
-                </span>
-                <span className="menu2 size glyphicon glyphicon-home" />
+            <Link to="/">
+              <span className="menu size glyphicon glyphicon-home" />
+            </Link>
+            <span className="tidetracker">
+              <span className="glyphicon glyphicon-tint" />
+              TIDE TRACKER
+              <span className="glyphicon glyphicon-tint" />
+            </span>
+            <span className="menu2 size glyphicon glyphicon-home" />
           </header>
           <div className="container">
             <h3 className="welcome">Find Your Local Weather Station!</h3>
@@ -85,8 +78,8 @@ class Home extends Component {
               </Link>
             </div>
             <label className="disclaimer">
-              * Landlocked/Excluded States: MT, ND, SD, NE, ID, NV, UT, AZ, OK,
-              AR, TN, KY, MO, KS, CO, IA
+              * Landlocked/Excluded States: AR, AZ, CO, KS, KY, IA, ID, IL, IN,
+              MO, MT, ND, NE, NH, NM, NV, OK, SD, TN, UT, VT, WV, WY
             </label>
           </div>
         </div>

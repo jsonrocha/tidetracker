@@ -31,19 +31,21 @@ class Locations extends Component {
         <div className="background">
           <div className="content">
             <header className="App-header">
-            <Link to="/">
+              <Link to="/">
                 <span className="menu size glyphicon glyphicon-home" />
               </Link>
               <span className="tidetracker">
                 <span className="glyphicon glyphicon-tint" />
-                TIDE TRACKER<span className="glyphicon glyphicon-tint" />
-                </span>
-                <span className="menu2 size glyphicon glyphicon-home" />
+                TIDE TRACKER
+                <span className="glyphicon glyphicon-tint" />
+              </span>
+              <span className="menu2 size glyphicon glyphicon-home" />
             </header>
             <div className="container">
               <div className="search">
-                {/* ** GOOGLE MAP GOES HERE. MARKER WILL HAVE i KEY ** */}
-                <GMap stations={this.state.stations} />
+                <GMap
+                  stations={this.state.stations}
+                />
               </div>
             </div>
           </div>
