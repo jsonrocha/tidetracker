@@ -1,0 +1,5 @@
+dotnet publish -c Release
+
+cp dockerfile ./bin/release/netcoreapp2.1/publish
+
+docker build -t tide-tracker-image ./bin/release/netcoreapp2.1/publishgit giggddot
