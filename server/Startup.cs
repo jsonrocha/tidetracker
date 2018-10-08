@@ -19,6 +19,7 @@ namespace server
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            new TideTrackerContext().Database.Migrate();
         }
 
         public IConfiguration Configuration { get; }
@@ -26,13 +27,14 @@ namespace server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-        services.AddCors();
-        
+
+        var conn = Environment.GetEnvironmentVariable("CONNECTION_STRING") ??  "server=localhost;database=TideTracker;username=postgres;password=warrior";
             services
                 .AddEntityFrameworkNpgsql()
                 .AddDbContext<TideTrackerContext>(opt => 
-                    opt.UseNpgsql("server=localhost;username=postgres;password=warrior;database=TideTracker"));
+                    opt.UseNpgsql(conn));
 
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
