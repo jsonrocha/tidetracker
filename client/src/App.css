@@ -92,6 +92,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 1070px;
+  height: 100%;
   width: 1400px;
   font-family: "Raleway", sans-serif;
 }
@@ -201,6 +202,7 @@ table {
   font: 14px/1.4 "Montserrat", sans-serif;
   width: 400px;
   height: 300px;
+  margin-top: 60px;
 }
 th,
 td {
@@ -254,17 +256,8 @@ td:first-child {
 tfoot {
   text-align: right;
 }
-tfoot tr:last-child {
-  background: #f0f0f2;
-  color: #395870;
-  font-weight: bold;
-}
-tfoot tr:last-child td:first-child {
-  border-bottom-left-radius: 5px;
-}
-tfoot tr:last-child td:last-child {
-  border-bottom-right-radius: 5px;
-}
+
+
 
   .gm-style .gm-style-iw {
             text-align: center;
@@ -305,5 +298,5 @@ tfoot tr:last-child td:last-child {
         h1 {
           color: #395870;
           text-align: center;
-          margin-bottom: 50px;
+          margin-bottom: 15px;
         }

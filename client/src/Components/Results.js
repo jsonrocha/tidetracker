@@ -10,7 +10,7 @@ class Results extends Component {
       water_temperature: { data: [{}] },
       air_temperature: { data: [{}] },
       air_pressure: { data: [{}] },
-      wind: { data: [{}] }
+      wind: { data: [{}], metadata: [{}] }
     };
   }
 
@@ -23,6 +23,7 @@ class Results extends Component {
       "air_pressure",
       "wind"
     ];
+    
     products.forEach(product => {
       fetch(
         `https://tidesandcurrents.noaa.gov/api/datagetter?datum=MLLW&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`
@@ -35,6 +36,18 @@ class Results extends Component {
           });
         });
     });
+
+    fetch(
+      "https://localhost:5001/api/weatherstations/" +
+        stationId
+    )
+      .then(resp => resp.json())
+      .then(stationsData => {
+        console.log(stationsData);
+        this.setState({
+          stations: stationsData
+        });
+      });
   }
 
   render() {
@@ -55,6 +68,7 @@ class Results extends Component {
           <div className="container">
             <div className="results">
               <h1>Station ID: {this.props.match.params.station}</h1>
+              <h1>{this.state.wind.metadata.name} Station</h1>
               <table>
                 <thead>
                   <tr>

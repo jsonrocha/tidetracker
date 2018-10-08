@@ -68,12 +68,20 @@ class GMap extends Component {
           >
             <div className="center">
               <Router>
-                <Link to={"/results/" + this.state.selectedPlace.Id}>
+              <Link to={{
+                  pathname:"/results/" + this.state.selectedPlace.Id,
+                  state:{
+                    nickname: "hello"
+                  }}}>
                   <h4>View Results for:</h4>
                 </Link>
               </Router>
               <Router>
-                <Link to={"/results/" + this.state.selectedPlace.Id}>
+                <Link to={{
+                  pathname:"/results/" + this.state.selectedPlace.Id,
+                  state:{
+                    selectedPlace: this.state.selectedPlace
+                  }}}>
                   <span className="glyphicon blue glyphicon-tint" />
                   <span className="stationlink">
                     {" "}
