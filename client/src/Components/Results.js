@@ -10,7 +10,9 @@ class Results extends Component {
       water_temperature: { data: [{}] },
       air_temperature: { data: [{}] },
       air_pressure: { data: [{}] },
-      wind: { data: [{}], metadata: [{}] }
+      wind: { data: [{}] },
+      stations: {}
+
     };
   }
 
@@ -38,7 +40,7 @@ class Results extends Component {
     });
 
     fetch(
-      "https://localhost:5001/api/weatherstations/" +
+      "https://localhost:5001/api/weatherresults/" +
         stationId
     )
       .then(resp => resp.json())
@@ -66,9 +68,9 @@ class Results extends Component {
             <span className="menu2 size glyphicon glyphicon-home" />
           </header>
           <div className="container">
+          <h1>Station ID: {this.props.match.params.station}</h1>
+          <h1>{this.state.stations.nickname} Station, {this.state.stations.state}</h1>
             <div className="results">
-              <h1>Station ID: {this.props.match.params.station}</h1>
-              <h1>{this.state.wind.metadata.name} Station</h1>
               <table>
                 <thead>
                   <tr>
