@@ -39,7 +39,7 @@ class Results extends Component {
         });
     });
 
-    fetch("https://localhost:5001/api/weatherresults/" + stationId)
+    fetch(`${process.env.REACT_APP_API_URL.trim()}/api/weatherresults/` + stationId)
       .then(resp => resp.json())
       .then(stationsData => {
         console.log(stationsData);
@@ -61,9 +61,9 @@ class Results extends Component {
               />
             </Link>
             <span className="tidetracker">
-              <span className="glyphicon glyphicon-tint" />
-              TIDE TRACKER
-              <span className="glyphicon glyphicon-tint" />
+              <Link to="/">
+              <img src="../images/tidetrackerlogo.png" alt="TIDE-TRACKER" width="339px;" height="57px;"/>
+              </Link>
             </span>
             <span className="menu2">Back</span>
           </header>

@@ -54,9 +54,9 @@ class Home extends Component {
               <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
             </Link>
             <span className="tidetracker">
-              <span className="glyphicon glyphicon-tint" />
-              TIDE TRACKER
-              <span className="glyphicon glyphicon-tint" />
+            <Link to="/">
+              <img src="../images/tidetrackerlogo.png" alt="TIDE-TRACKER" width="339px;" height="57px;"/>
+              </Link>
             </span>
             <span className="menu2 size glyphicon glyphicon glyphicon-circle-arrow-left" />
           </header>

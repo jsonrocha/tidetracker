@@ -12,7 +12,7 @@ class Locations extends Component {
 
   componentDidMount() {
     fetch(
-      "https://localhost:5001/api/weatherstations/" +
+      `${process.env.REACT_APP_API_URL.trim()}/api/weatherstations/` +
         this.props.match.params.state
     )
       .then(resp => resp.json())
@@ -35,9 +35,9 @@ class Locations extends Component {
               <span title="Back" className="menu size glyphicon glyphicon-circle-arrow-left" />
               </Link>
               <span className="tidetracker">
-                <span className="glyphicon glyphicon-tint" />
-                TIDE TRACKER
-                <span className="glyphicon glyphicon-tint" />
+              <Link to="/">
+              <img src="../images/tidetrackerlogo.png" alt="TIDE-TRACKER" width="339px;" height="57px;"/>
+              </Link>
               </span>
               <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
             </header>
