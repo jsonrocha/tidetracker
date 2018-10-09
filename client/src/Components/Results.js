@@ -55,7 +55,7 @@ class Results extends Component {
   render() {
     return (
       <div className="background">
-        <div className="content">
+        <div className="content2">
           <header className="App-header">
             <Link to="/">
               <span className="menu size glyphicon glyphicon-home" />
@@ -68,8 +68,10 @@ class Results extends Component {
             <span className="menu2 size glyphicon glyphicon-home" />
           </header>
           <div className="container">
-          <h1>Station ID: {this.props.match.params.station}</h1>
-          <h1>{this.state.stations.nickname} Station, {this.state.stations.state}</h1>
+          <div className="resultstext">
+          <h3>Station ID: {this.props.match.params.station}</h3>
+          <h3>{this.state.stations.nickname} Station, {this.state.stations.state}</h3>
+          </div>
             <div className="results">
               <table>
                 <thead>

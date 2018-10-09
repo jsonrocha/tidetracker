@@ -7,10 +7,20 @@
   border-bottom: 2px solid #dbdcdc;
   padding-left: 15px;
   padding-right: 15px;
+  flex-direction: row;
+}
+
+h3 {
+  color: #333;
+}
+
+.resultstext {
+  margin-top: 50px;
+  text-align: center;
 }
 
 .welcome {
-  margin-top: 30px;
+  margin-top: 70px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
   color: #395870;
@@ -61,7 +71,7 @@ button:focus {
 
 .mapcontainer{
   font-family: "Raleway", sans-serif;
-  width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -93,7 +103,17 @@ button:focus {
   flex-direction: column;
   min-height: 1070px;
   height: 100%;
-  width: 1400px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+.content2 {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  min-height: 1070px;
+  height: 100%;
+
   font-family: "Raleway", sans-serif;
 }
 
@@ -202,7 +222,6 @@ table {
   font: 14px/1.4 "Montserrat", sans-serif;
   width: 400px;
   height: 300px;
-  margin-top: 60px;
 }
 th,
 td {
@@ -292,7 +311,7 @@ tfoot {
         }
 
         .stationlink {
-          font-size: 20px;
+          font-size: 14px;
         }
 
         h1 {
