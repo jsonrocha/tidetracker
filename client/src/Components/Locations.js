@@ -42,14 +42,12 @@ class Locations extends Component {
               <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
             </header>
             <div className="container">
-              <div className="search">
                 <GMap
                   stations={this.state.stations}
                 />
               </div>
             </div>
           </div>
-        </div>
       </section>
     );
   }

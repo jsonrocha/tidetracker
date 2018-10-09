@@ -10,6 +10,12 @@
   flex-direction: row;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 a[disabled] {
   pointer-events: none;
 }
@@ -92,7 +98,7 @@ button:focus {
 }
 
 .mapcontainer > div {
-  width: 1212px !important;
+  width: 100%;
 }
 
 .container {
@@ -102,6 +108,7 @@ button:focus {
   flex-direction: column;
   font-family: "Raleway", sans-serif;
   padding: 0px;
+  width: 100%;
 }
 
 .disclaimer {
@@ -240,8 +247,10 @@ table {
   border-spacing: 0;
   color: #4a4a4d;
   font: 14px/1.4 "Montserrat", sans-serif;
-  width: 530px;
-  height: 430px;
+  width: 500px;
+  height: 400px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 th,
 td {

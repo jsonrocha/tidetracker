@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const style = {
-  height: "85%",
+  height: "100%",
+  width: "100%",
   position: "relative",
   margin: "0px 0px 0px 0px"
 };
