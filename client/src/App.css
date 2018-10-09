@@ -10,7 +10,11 @@
   flex-direction: row;
 }
 
-h3 {
+a[disabled] {
+  pointer-events: none;
+}
+
+h2 {
   color: #333;
 }
 
@@ -19,10 +23,19 @@ h3 {
   text-align: center;
 }
 
-.welcome {
+.welcome1 {
   margin-top: 70px;
+  margin-bottom: 0px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
+  color: #395870;
+}
+
+.welcome2 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
   color: #395870;
 }
 
@@ -93,8 +106,8 @@ button:focus {
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  font-size: 12px;
-
+  font-size: 14px;
+  text-align: center;
 }
 
 .content {
@@ -168,12 +181,17 @@ button {
   margin-left: 10px;
 }
 
+button:hover {
+  background-color: #395870;
+  color: #fafafa;
+}
+
 .content {
   margin-top: 0px;
   font-family: "Raleway", sans-serif;
 }
 
-.glyphicon-home {
+.glyphicon-circle-arrow-left {
   font-size: 40px;
   display: flex;
   margin-top: 25px;
@@ -220,8 +238,8 @@ table {
   border-spacing: 0;
   color: #4a4a4d;
   font: 14px/1.4 "Montserrat", sans-serif;
-  width: 400px;
-  height: 300px;
+  width: 530px;
+  height: 430px;
 }
 th,
 td {
@@ -250,6 +268,7 @@ tbody tr:nth-child(even) {
 td {
   border-bottom: 1px solid #cecfd5;
   border-right: 1px solid #cecfd5;
+  font-size: 20px;
 }
 td:first-child {
   border-left: 1px solid #cecfd5;

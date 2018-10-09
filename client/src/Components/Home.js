@@ -15,13 +15,10 @@ const options = [
   { value: "maine", label: "Maine" },
   { value: "maryland", label: "Maryland" },
   { value: "massachusetts", label: "Massachusetts" },
-  { value: "michigan", label: "Michigan" },
-  { value: "minnesota", label: "Minnesota" },
   { value: "mississippi", label: "Mississippi" },
   { value: "new jersey", label: "New Jersey" },
   { value: "new york", label: "New York" },
   { value: "north carolina", label: "North Carolina" },
-  { value: "ohio", label: "Ohio" },
   { value: "oregon", label: "Oregon" },
   { value: "pennsylvania", label: "Pennsylvania" },
   { value: "rhode island", label: "Rhode Island" },
@@ -54,32 +51,35 @@ class Home extends Component {
         <div className="content">
           <header className="App-header">
             <Link to="/">
-              <span className="menu size glyphicon glyphicon-home" />
+              <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
             </Link>
             <span className="tidetracker">
               <span className="glyphicon glyphicon-tint" />
               TIDE TRACKER
               <span className="glyphicon glyphicon-tint" />
             </span>
-            <span className="menu2 size glyphicon glyphicon-home" />
+            <span className="menu2 size glyphicon glyphicon glyphicon-circle-arrow-left" />
           </header>
           <div className="container">
-            <h3 className="welcome">Find Your Local Weather Station!</h3>
+            <h3 className="welcome1">Find Your Local Weather Station!</h3>
+            <h3 className="welcome2">
+              Get real-time coastal weather conditions based on your state
+            </h3>
             <div className="search">
               <label className="searchlabel">Enter State/Province:</label>
               <Dropdown />
-              <Link
+              <Link disabled={!this.state.selectedOption.label}
                 className="plain"
                 to={"/locations/" + this.state.selectedOption.label}
               >
-                <button>
+                <button disabled={!this.state.selectedOption.label}>
                   <span className="glyphicon glyphicon-search" />
                 </button>
               </Link>
             </div>
             <label className="disclaimer">
-              * Landlocked/Excluded States: AR, AZ, CO, KS, KY, IA, ID, IL, IN,
-              MO, MT, ND, NE, NH, NM, NV, OK, SD, TN, UT, VT, WV, WY
+              * Landlocked/Excluded States: AR, AZ, CO, KS, KY, IA, ID, IL, IN, MI, MN,
+              MO, MT, ND, NE, NH, NM, NV, OH, OK, SD, TN, UT, VT, WV, WY
             </label>
           </div>
         </div>

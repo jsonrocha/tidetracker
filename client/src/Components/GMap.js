@@ -9,12 +9,15 @@ const style = {
   margin: "0px 0px 0px 0px"
 };
 
+let bounds;
 class GMap extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {}
   };
+
+  componentDidMount() {}
 
   onMarkerClick = (props, marker, e) => {
     console.log({ props, marker });
@@ -35,6 +38,22 @@ class GMap extends Component {
   };
 
   render() {
+    const points = this.props.stations.map(station => {
+      return { lat: station.lat, lng: station.long };
+    });
+    console.log({ points });
+    bounds = new this.props.google.maps.LatLngBounds();
+    for (var i = 0; i < points.length; i++) {
+      bounds.extend(points[i]);
+    }
+    console.log({ bounds });
+
+    const lat = this.props.stations.reduce((acc, item) => {return acc+item.lat},0) /this.props.stations.length;
+    const lng = this.props.stations.reduce((acc, item) => {return acc+item.long},0) /this.props.stations.length;
+    const pos = {
+      lat, lng
+    }
+    console.log({pos})
     return (
       <div className="mapcontainer">
         <Map
@@ -42,11 +61,9 @@ class GMap extends Component {
           style={style}
           google={this.props.google}
           mapTypeControl={false}
-          initialCenter={{
-            lat: 45.854885,
-            lng: -105.081807
-          }}
-          zoom={4}
+          initialCenter={pos}
+          bounds={bounds}
+          zoom={5}
         >
           {this.props.stations.map((station, i) => {
             return (
@@ -68,11 +85,14 @@ class GMap extends Component {
           >
             <div className="center">
               <Router>
-                <Link to={{
-                  pathname:"/results/" + this.state.selectedPlace.Id,
-                  state:{
-                    selectedPlace: this.state.selectedPlace
-                  }}}>
+                <Link
+                  to={{
+                    pathname: "/results/" + this.state.selectedPlace.Id,
+                    state: {
+                      selectedPlace: this.state.selectedPlace
+                    }
+                  }}
+                >
                   <span className="glyphicon blue glyphicon-tint" />
                   <span className="stationlink">
                     {" "}
