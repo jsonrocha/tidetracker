@@ -15,6 +15,7 @@
     "start": "SET REACT_APP_API_URL=https://localhost:5001 &&  react-scripts start",
     "build": "SET REACT_APP_API_URL=https://tidetracker.herokuapp.com && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy":"yarn build; surge build --domain tidetracker.live"
   }
 }
