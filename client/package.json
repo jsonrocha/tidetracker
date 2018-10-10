@@ -16,6 +16,6 @@
     "build": "SET REACT_APP_API_URL=https://tidetracker.herokuapp.com && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy":"yarn build; surge build --domain tidetracker.live"
+    "deploy":"yarn build && surge build --domain tidetracker.live"
   }
 }
