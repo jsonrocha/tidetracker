@@ -360,9 +360,13 @@ tfoot {
 
 @media screen and (max-width: 495px) {
   .tidetracker img {
-    width: 200px;
+    width: 190px;
     height: 33px;
   } 
+
+  .resultstext h3{
+    font-size: 16px;
+  }
 
   .css-1rtrksz {
     min-width: 125px;
@@ -475,11 +479,15 @@ tfoot {
   }
 }
 
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 285px) {
   .tidetracker img {
     width: 100px;
     height: 17px;
   } 
+  
+  h3 {
+    font-size: 14px;
+  }
 
   .menu {
     font-size: 10px;
@@ -534,13 +542,12 @@ tfoot {
 
 /* RESULTS PAGE  */
 
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 750px) {
 
   table {
-    width: 95%;
-    height: 95%;
+    width: 60%;
+    height: 60%;
   }
-
   
   h2 {
     font-size: 24px;
@@ -570,11 +577,6 @@ tfoot {
    .results {
      display: flex;
      justify-content: center;
-   }
-
-   table {
-     width: 80%;
-     height: 80%;
    }
    
  }
@@ -622,23 +624,6 @@ tfoot {
 
   h2 {
     font-size: 14px;
-  }
-  
-}
-
-@media screen and (max-width: 452px) {
- 
-  td {
-    font-size: 8px;
-  }
-
-  .results {
-    display: flex;
-    justify-content: center;
-  }
-
-  h2 {
-    font-size: 12px;
   }
   
 }

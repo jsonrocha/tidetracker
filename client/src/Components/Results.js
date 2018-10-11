@@ -12,7 +12,6 @@ class Results extends Component {
       air_pressure: { data: [{}] },
       wind: { data: [{}] },
       stations: {}
-
     };
   }
 
@@ -25,7 +24,7 @@ class Results extends Component {
       "air_pressure",
       "wind"
     ];
-    
+
     products.forEach(product => {
       fetch(
         `https://tidesandcurrents.noaa.gov/api/datagetter?datum=MLLW&date=latest&station=${stationId}&product=${product}&units=english&time_zone=lst&&format=json`
@@ -40,8 +39,7 @@ class Results extends Component {
     });
 
     fetch(
-      `${process.env.REACT_APP_API_URL.trim()}/api/weatherresults/` +
-        stationId
+      `${process.env.REACT_APP_API_URL.trim()}/api/weatherresults/` + stationId
     )
       .then(resp => resp.json())
       .then(stationsData => {
@@ -56,22 +54,33 @@ class Results extends Component {
     return (
       <div className="background">
         <div className="content2">
-        <header className="App-header">
+          <header className="App-header">
+            <Link to={`/locations/${this.state.stations.state}`}>
+              <span
+                title="Back"
+                className="menu size glyphicon glyphicon-circle-arrow-left"
+              />
+            </Link>
+            <span className="tidetracker">
               <Link to="/">
-              <span title="Back" className="menu size glyphicon glyphicon-circle-arrow-left" />
+                <img
+                  src="../images/tidetrackerlogo.png"
+                  alt="TIDE-TRACKER"
+                  width="339px;"
+                  height="57px;"
+                />
               </Link>
-              <span className="tidetracker">
-              <Link to="/">
-              <img src="../images/tidetrackerlogo.png" alt="TIDE-TRACKER" width="339px;" height="57px;"/>
-              </Link>
-              </span>
-              <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
-            </header>
+            </span>
+            <span className="menu2 size glyphicon glyphicon-circle-arrow-left" />
+          </header>
           <div className="container">
-          <div className="resultstext">
-          <h3>Station ID: {this.props.match.params.station}</h3>
-          <h3>{this.state.stations.nickname} Station, {this.state.stations.state}</h3>
-          </div>
+            <div className="resultstext">
+              <h3>Station ID: {this.props.match.params.station}</h3>
+              <h3>
+                {this.state.stations.nickname} Station,{" "}
+                {this.state.stations.state}
+              </h3>
+            </div>
             <div className="results">
               <table>
                 <thead>

@@ -13,8 +13,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/results/:station" exact component={Results} />
             <Route path="/locations/:state" exact component={Locations} />
+            <Route path="/results/:station" exact component={Results} />
             <Route exact component={GMap} />
           </Switch>
         </Router>
